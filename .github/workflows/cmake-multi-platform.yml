@@ -62,6 +62,8 @@ jobs:
   create_release:
     needs: rabota
     runs-on: ubuntu-latest
+    permissions:
+       contents: write 
 
     steps:
     - uses: actions/checkout@v4
@@ -113,5 +115,5 @@ jobs:
           artifacts/windows/*.msi
           artifacts/macos/*.dmg
           artifacts/linux/*.zip
-          artifacts/linux/*.tar.gz 
-          
+          artifacts/linux/*.tar.gz  
+
